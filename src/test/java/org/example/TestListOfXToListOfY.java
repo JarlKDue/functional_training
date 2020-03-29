@@ -3,11 +3,8 @@ package org.example;
 import org.example.functions.List_Of_X_To_List_Of_Y;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class TestListOfXToListOfY {
 
@@ -26,6 +23,4 @@ public class TestListOfXToListOfY {
         children.add(new Child(null, "Mattson", "ABC"));
         Optional<List<Person>> people = List_Of_X_To_List_Of_Y.convert_x_to_y(Optional.of(children), ChildToPerson);
     }
-
-
 }
