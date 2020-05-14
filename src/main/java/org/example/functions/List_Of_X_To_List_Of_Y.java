@@ -17,7 +17,7 @@ public interface List_Of_X_To_List_Of_Y {
      * @param <X> Type to convert
      * @return an Optional List<Y>
      */
-    static <Y, X> Optional<List<Y>> convert_x_to_y(Optional<List<X>> x_list, Function<X, Y> morphism){
+    static <Y, X> Optional<List<Y>> convert_x_to_y(Optional<List<X>> x_list, Function<X,Y> morphism){
         try {
             return x_list.map(xes -> xes.stream().map(morphism).collect(Collectors.toList()));
         } catch (Exception e) {
